@@ -1,3 +1,8 @@
 body {
   --mainBackgroundColor: red !important;
 }
+
+#custom-css .header .icon-logo {
+  background: url('../../static/images/chocobo.png') no-repeat;
+  background-size: contain;
+}
