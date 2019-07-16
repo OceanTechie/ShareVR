@@ -1,0 +1,7 @@
+body {
+  --mainForegroundColor: yello !important;
+}
+
+.action-button-dislike {
+  display: none !important;
+}

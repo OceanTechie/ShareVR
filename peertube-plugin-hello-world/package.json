@@ -1,0 +1,33 @@
+{
+  "name": "peertube-plugin-hello-world",
+  "version": "0.0.7",
+  "description": "Hello world PeerTube plugin example",
+  "engine": {
+    "peertube": ">=1.3.0"
+  },
+  "keywords": [
+    "peertube",
+    "plugin"
+  ],
+  "homepage": "https://github.com/Chocobozzz/PeerTube",
+  "author": "Chocobozzz",
+  "bugs": "https://github.com/Chocobozzz/PeerTube/issues",
+  "library": "./main.js",
+  "staticDirs": {
+    "images": "public/images"
+  },
+  "css": [
+    "assets/style1.css",
+    "assets/style2.css"
+  ],
+  "clientScripts": [
+    {
+      "script": "client/common-client-plugin.js",
+      "scopes": [ "common" ]
+    },
+    {
+      "script": "client/video-watch-client-plugin.js",
+      "scopes": [ "video-watch" ]
+    }
+  ]
+}
