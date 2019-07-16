@@ -9,9 +9,9 @@
     "peertube",
     "plugin"
   ],
-  "homepage": "https://github.com/Chocobozzz/PeerTube",
+  "homepage": "https://framagit.org/framasoft/peertube/official-plugins/tree/master/peertube-plugin-hello-world",
   "author": "Chocobozzz",
-  "bugs": "https://github.com/Chocobozzz/PeerTube/issues",
+  "bugs": "https://framagit.org/framasoft/peertube/official-plugins/issues",
   "library": "./main.js",
   "staticDirs": {
     "images": "public/images"

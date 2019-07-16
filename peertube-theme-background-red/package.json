@@ -9,9 +9,9 @@
     "peertube",
     "theme"
   ],
-  "homepage": "https://github.com/Chocobozzz/PeerTube",
+  "homepage": "https://framagit.org/framasoft/peertube/official-plugins/tree/master/peertube-theme-background-red",
   "author": "Chocobozzz",
-  "bugs": "https://github.com/Chocobozzz/PeerTube/issues",
+  "bugs": "https://framagit.org/framasoft/peertube/official-plugins/issues",
   "staticDirs": {
     "images": "public/images"
   },
