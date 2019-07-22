@@ -1,7 +1,7 @@
 function register ({ registerHook, peertubeHelpers }) {
   registerHook({
-    target: 'action:application.loaded',
-    handler: () => onApplicationLoaded(peertubeHelpers)
+    target: 'action:application.init',
+    handler: () => onApplicationInit(peertubeHelpers)
   })
 }
 
@@ -9,7 +9,7 @@ export {
   register
 }
 
-function onApplicationLoaded (peertubeHelpers) {
+function onApplicationInit (peertubeHelpers) {
   console.log('Hello application world')
 
   const baseStaticUrl = peertubeHelpers.getBaseStaticRoute()

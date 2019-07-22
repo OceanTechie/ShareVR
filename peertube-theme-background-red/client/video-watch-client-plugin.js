@@ -1,6 +1,6 @@
 function register ({ registerHook, peertubeHelpers }) {
   registerHook({
-    target: 'action:video-watch.loaded',
+    target: 'action:video-watch.init',
     handler: () => console.log('Background red watch world')
   })
 }
