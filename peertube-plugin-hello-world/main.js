@@ -6,6 +6,11 @@ async function register ({ registerHook, registerSetting, settingsManager, stora
     handler: () => displayHelloWorld(settingsManager, defaultAdmin)
   })
 
+  registerHook({
+    target: 'unknown-hook',
+    handler: () => console.log('fake hook')
+  })
+
   registerSetting({
     name: 'admin-name',
     label: 'Admin name',

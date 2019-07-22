@@ -7,69 +7,50 @@ function register ({ registerHook, peertubeHelpers }) {
   // Videos list
 
   registerHook({
-    target: 'filter:api.videos.list.trending.params',
+    target: 'filter:api.trending-videos.videos.list.params',
     handler: params => Object.assign({}, params, { sort: '-views' })
   })
 
   registerHook({
-    target: 'filter:api.videos.list.trending.result',
+    target: 'filter:api.trending-videos.videos.list.result',
     handler: result => addSymbolToVideoNameResult(result, '<3')
   })
 
   registerHook({
-    target: 'filter:api.videos.list.local.params',
+    target: 'filter:api.local-videos.videos.list.params',
     handler: params => Object.assign({}, params, { sort: '-views' })
   })
 
   registerHook({
-    target: 'filter:api.videos.list.local.result',
+    target: 'filter:api.local-videos.videos.list.result',
     handler: result => addSymbolToVideoNameResult(result, ':)')
   })
 
   registerHook({
-    target: 'filter:api.videos.list.recently-added.params',
+    target: 'filter:api.recently-added-videos.videos.list.params',
     handler: params => Object.assign({}, params, { filter: 'all-local' })
   })
 
   registerHook({
-    target: 'filter:api.videos.list.recently-added.result',
+    target: 'filter:api.recently-added-videos.videos.list.result',
     handler: result => addSymbolToVideoNameResult(result, 'o/')
   })
 
   registerHook({
-    target: 'filter:api.videos.list.user-subscriptions.params',
+    target: 'filter:api.user-subscriptions-videos.videos.list.params',
     handler: params => Object.assign({}, params, { sort: '-views' })
   })
 
   registerHook({
-    target: 'filter:api.videos.list.user-subscriptions.result',
+    target: 'filter:api.user-subscriptions-videos.videos.list.result',
     handler: result => addSymbolToVideoNameResult(result, ':D')
   })
 
-  // Search list
+  // Fake hook
 
   registerHook({
-    target: 'filter:api.search.videos.list.result',
-    handler: result => {
-      result.data.forEach(v => v.name += ' SEARCH')
-
-      return {
-        total: result.total,
-        data: result.data
-      }
-    }
-  })
-
-  registerHook({
-    target: 'filter:api.search.video-channels.list.result',
-    handler: result => {
-      result.data.forEach(v => v.displayName += ' :p')
-
-      return {
-        total: result.total,
-        data: result.data
-      }
-    }
+    target: 'fakeHook',
+    handler: () => console.log('fake hook')
   })
 
 }

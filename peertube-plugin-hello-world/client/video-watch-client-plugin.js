@@ -21,7 +21,7 @@ function register ({ registerHook, peertubeHelpers }) {
   registerHook({
     target: 'filter:api.video-watch.video-threads.list.result',
     handler: result => {
-      result.comments.forEach(c => c.text += ' THREAD')
+      result.data.forEach(c => c.text += ' THREAD')
 
       return result
     }
