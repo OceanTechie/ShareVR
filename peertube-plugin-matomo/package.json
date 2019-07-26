@@ -1,0 +1,24 @@
+{
+  "name": "peertube-plugin-matomo",
+  "version": "0.0.1",
+  "description": "Hello world PeerTube plugin example",
+  "engine": {
+    "peertube": ">=1.3.0"
+  },
+  "keywords": [
+    "peertube",
+    "plugin"
+  ],
+  "homepage": "https://framagit.org/framasoft/peertube/official-plugins/tree/master/peertube-plugin-matomo",
+  "author": "Chocobozzz",
+  "bugs": "https://framagit.org/framasoft/peertube/official-plugins/issues",
+  "library": "./main.js",
+  "staticDirs": {},
+  "css": [],
+  "clientScripts": [
+    {
+      "script": "client/common-client-plugin.js",
+      "scopes": [ "common" ]
+    }
+  ]
+}
