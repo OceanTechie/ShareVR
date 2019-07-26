@@ -46,6 +46,13 @@ function register ({ registerHook, peertubeHelpers }) {
     handler: result => addSymbolToVideoNameResult(result, ':D')
   })
 
+  // Router hooks
+
+  registerHook({
+    target: 'action:router.navigation-end',
+    handler: params => console.log('New URL! %s.', params.path)
+  })
+
   // Fake hook
 
   registerHook({

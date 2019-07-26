@@ -15,7 +15,15 @@ async function register ({ registerHook, registerSetting, settingsManager, stora
     name: 'admin-name',
     label: 'Admin name',
     type: 'input',
+    private: true,
     default: defaultAdmin
+  })
+
+  registerSetting({
+    name: 'user-name',
+    label: 'User name',
+    type: 'input',
+    private: false
   })
 
   const value = await storageManager.getData('toto')
