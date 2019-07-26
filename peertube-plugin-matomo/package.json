@@ -1,6 +1,6 @@
 {
   "name": "peertube-plugin-matomo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hello world PeerTube plugin example",
   "engine": {
     "peertube": ">=1.3.0"
@@ -20,5 +20,6 @@
       "script": "client/common-client-plugin.js",
       "scopes": [ "common" ]
     }
-  ]
+  ],
+  "translations": {}
 }

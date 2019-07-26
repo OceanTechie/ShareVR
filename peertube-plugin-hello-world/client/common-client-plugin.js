@@ -75,6 +75,9 @@ function onApplicationInit (peertubeHelpers) {
   const topLeftBlock = document.querySelector('.top-left-block')
 
   topLeftBlock.style.backgroundImage = 'url(' + imageUrl + ')'
+
+  peertubeHelpers.translate('User name')
+   .then(translation => console.log('Translated User name by ' + translation))
 }
 
 function addSymbolToVideoNameResult (result, symbol) {

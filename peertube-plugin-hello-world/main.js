@@ -1,4 +1,12 @@
-async function register ({ registerHook, registerSetting, settingsManager, storageManager }) {
+async function register ({
+  registerHook,
+  registerSetting,
+  settingsManager,
+  storageManager,
+  videoCategoryManager,
+  videoLicenceManager,
+  videoLanguageManager
+}) {
   const defaultAdmin = 'PeerTube admin'
 
   registerHook({
@@ -30,6 +38,15 @@ async function register ({ registerHook, registerSetting, settingsManager, stora
   console.log(value)
 
   await storageManager.storeData('toto', 'hello' + new Date())
+
+  videoLanguageManager.addLanguage('al_bhed', 'Al Bhed')
+  videoLanguageManager.deleteLanguage('fr')
+
+  videoCategoryManager.addCategory(42, 'Best category')
+  videoCategoryManager.deleteCategory(1) // Music
+
+  videoLicenceManager.addLicence(42, 'Best licence')
+  videoLicenceManager.deleteLicence(7) // Public domain
 }
 
 async function unregister () {

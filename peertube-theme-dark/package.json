@@ -1,6 +1,6 @@
 {
   "name": "peertube-theme-dark",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PeerTube dark theme",
   "engine": {
     "peertube": ">=1.3.0"
@@ -16,5 +16,6 @@
   "css": [
     "assets/style.css"
   ],
-  "clientScripts": []
+  "clientScripts": [],
+  "translations": {}
 }

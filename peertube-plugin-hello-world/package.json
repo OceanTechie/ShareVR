@@ -1,6 +1,6 @@
 {
   "name": "peertube-plugin-hello-world",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Hello world PeerTube plugin example",
   "engine": {
     "peertube": ">=1.3.0"
@@ -33,5 +33,8 @@
       "script": "client/search-client-plugin.js",
       "scopes": [ "search" ]
     }
-  ]
+  ],
+  "translations": {
+    "fr-FR": "./languages/fr.json"
+  }
 }
