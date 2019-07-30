@@ -1,3 +1,7 @@
-# Hello World plugin
+# Matomo plugin for PeerTube
 
-Just a PeerTube plugin example, that says "Hello world".
+Matomo plugin that tracks page views on a PeerTube instance.
+
+## Settings
+
+![settings screen](http://lutim.cpy.re/7B4o8oRf.png)
