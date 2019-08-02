@@ -1,0 +1,5 @@
+#custom-css .icon.icon-logo {
+  background: url('/plugins/logo-framasoft/0.0.1/static/images/framasoft-logo.png') no-repeat;
+  width: 25px;
+  margin-right: 5px;
+}

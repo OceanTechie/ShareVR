@@ -1,0 +1,1 @@
+# Framasoft logo on PeerTube
