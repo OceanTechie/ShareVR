@@ -35,6 +35,16 @@ function register ({ registerHook, peertubeHelpers }) {
       return result
     }
   })
+
+  registerHook({
+    target: 'filter:internal.video-watch.player.build-options.result',
+    handler: (result, params) => {
+      console.log('Running player build options hook for video %s.', params.video.name)
+      result.playerOptions.common.inactivityTimeout = 10000
+
+      return result
+    }
+  })
 }
 
 export {

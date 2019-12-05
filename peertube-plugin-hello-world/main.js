@@ -19,6 +19,19 @@ async function register ({
     handler: () => console.log('fake hook')
   })
 
+  registerHook({
+    target: 'filter:api.user.signup.allowed.result',
+    handler: (result, params) => {
+      if (result.allowed === false) return result
+
+      if (params && params.body.email.includes('laposte.net')) {
+        return { allowed: false, errorMessage: 'laposte.net emails are not allowed on this instance' }
+      }
+
+      return result
+    }
+  })
+
   registerSetting({
     name: 'admin-name',
     label: 'Admin name',
